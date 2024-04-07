@@ -1,7 +1,10 @@
+import { usePortfolioContext } from "../../context/usePortfolioContext";
+
 const Hero = () => {
+	const {setShowContact} = usePortfolioContext();
 
 	const handleClickContact = () => {
-		window.open('https://calendly.com/equipe-3wa/prise-de-contact-entreprise-eleve?utm_content=Florian%20Garcia&utm_campaign=rectInocEnkWgtXUU&utm_source=+33613322736', '_blank');
+		setShowContact(true);
 	}
 
     return (
@@ -15,9 +18,15 @@ const Hero = () => {
                     <br/><br/>
                     Maintenant qu'il est temps de professionnaliser mon profil, je recherche actuellement une alternance pour ma formation de Développeur web full stack à la 3W Academy.
                 </h3>
-				<div className="hero-cta-dv">
+				<div className="cta-dv hero-cta-dv">
 					<a href="/doc/cv.pdf" rel="noreferrer" target="_blank"><button>Voir mon CV</button></a>
 					<button onClick={handleClickContact}>Me concacter</button>
+					<a href="https://www.linkedin.com/in/florian-garcia-soto/" rel="noreferrer" target="_blank" title="Voir mon profil LinkedIn">
+						<img src="/icon/dark/LinkedIn_icon.svg"/>
+					</a>
+					<a href="https://github.com/floriangarciasoto" rel="noreferrer" target="_blank" title="Voir mon compte GitHub">
+						<img src="/icon/light/github-mark.svg"/>
+					</a>
 				</div>
 			</div>
 		</div>

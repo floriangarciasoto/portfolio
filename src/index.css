@@ -16,8 +16,8 @@ a {
     color: inherit;
 }
 
-button {
-    margin: 0.5em;
+button, .button-icon {
+    margin: 0.5em 0.25em;
     padding: 0.5em;
     font-weight: bold;
     cursor: pointer;
@@ -25,22 +25,94 @@ button {
     background-color: var(--main-color);
     border: none;
     border-radius: 0.5em;
+    font-size: 1rem;
 }
-button:hover {
+button:hover, .button-icon:hover {
     color: var(--main-color);
     background-color: white;
 }
-button {
-    font-size: 1em;
+.button-icon {
+    padding-left: 2.25em;
 }
+
+.box {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #888;
+}
+
+/* Buttons with icons */
+
+.button-icon-copy {
+    background: url('/icon/light/copy-icon.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+.button-icon-copy:hover {
+    background: url('/icon/dark/copy-icon.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-call {
+    background: url('/icon/light/phone-call-icon.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+.button-icon-call:hover {
+    background: url('/icon/dark/phone-call-icon.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-calendar {
+    background: url('/icon/light/calendar-svgrepo-com.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+.button-icon-calendar:hover {
+    background: url('/icon/dark/calendar-svgrepo-com.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-mail {
+    background: url('/icon/light/mail.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+.button-icon-mail:hover {
+    background: url('/icon/dark/mail.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
 
 /* Background */
 
 .bg-video {
     position: fixed;
     z-index: -1;
-    left: -50%;
     max-width: initial;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
 }
 
 /* Header */
@@ -56,6 +128,10 @@ header {
 
 header .logo {
     height: 4em;
+}
+
+header nav {
+    display: none;
 }
 
 header nav a {
@@ -97,7 +173,6 @@ header nav a:hover {
 }
 
 .hero-infos {
-    /* width: 30%; */
     text-align: center;
 }
 
@@ -107,7 +182,7 @@ header nav a:hover {
 }
 
 .hero-subtitle {
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     margin: 0.25em 0 0.25em 0;
 }
 
@@ -125,9 +200,183 @@ header nav a:hover {
     margin-left: 0;
 }
 
+.hero-cta-dv {
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-cta-dv img {
+    height: 2.25em;
+    margin: 0.5em;
+    margin-bottom: 0.25em;
+}
+.hero-cta-dv :nth-child(3) {
+    margin-left: 0.25em;
+}
 
+/* Contact */
+
+.contact-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000088;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.contact-sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-top: 0.5em;
+}
+.contact-sep > :first-child, .contact-sep > :last-child {
+    width: 50%;
+    height: 2px;
+    background-color: #bbb;
+    margin: 0.75em;
+}
+
+.contact h3 {
+    color: #bbb;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.cta-dv-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Message */
+
+@keyframes messageOpacityAnim {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes messageBarAnim {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.message-dv {
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.message {
+    color: var(--main-color);
+    background-color: white;
+    margin: 1em;
+    text-align: center;
+    border-radius: 0.5em;
+    font-weight: bold;
+    opacity: 0;
+    animation: messageOpacityAnim 5s;
+    overflow: hidden;
+}
+
+.message-text {
+    padding: 1em;
+    padding-bottom: calc(1em - 3px);
+}
+
+.message-bar {
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    animation: messageBarAnim 4.5s linear;
+}
+
+/* Wide screens only */
+@media (min-width: 768px) {
+    header nav {
+        display: block;
+    }
+    
+    .burger {
+        display: none;
+    }
+
+    .hero {
+        width: 80%;
+        margin: auto;
+        flex-direction: row;
+    }
+
+    .hero-pp {
+        --hero-pp-size: 12.5em;
+    }
+
+    .hero-infos {
+        text-align: left;
+    }
+
+    .hero-hook {
+        max-width: 600px;
+    }
+
+    .hero-cta-dv {
+        justify-content: flex-start;
+    }
+
+    .hero-cta-dv > a button:first-child {
+        margin-left: 0;
+    }
+}
+
+/* Devices with pointer only */
 @media (hover: hover) {
-    button, .btn, header nav a {
+    button, .button-icon, header nav a {
         transition-duration: 0.4s;
+    }
+
+    .contact-out {
+        cursor: pointer;
     }
 }
