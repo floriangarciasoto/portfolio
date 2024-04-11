@@ -21,7 +21,7 @@ const Hero = () => {
 				<div className="cta-dv hero-cta-dv">
 					<div>
 						<a href="/doc/cv.pdf" rel="noreferrer" target="_blank"><button>Voir mon CV</button></a>
-						<button onClick={handleClickContact}>Me concacter</button>
+						<button onClick={handleClickContact}>Me contacter</button>
 					</div>
 					<div>
 						<a href="https://www.linkedin.com/in/florian-garcia-soto/" rel="noreferrer" target="_blank" title="Voir mon profil LinkedIn">
