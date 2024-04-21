@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { usePortfolioContext } from "../../context/usePortfolioContext";
 import { copyToClipboard } from "../../utils";
 
 const Contact = () => {
 	const {setShowContact, setMessage} = usePortfolioContext();
+	const [onLeaveContact, setOnLeaveContact] = useState(false);
 
 	const handleClickOut = () => {
-		setShowContact(false);
+		setOnLeaveContact(true);
+		setTimeout(() => setShowContact(false),490);
 	}
 
 	const handleCopyPhoneNumber = () => {
@@ -31,7 +34,7 @@ const Contact = () => {
 	}
 
     return (
-		<div className="contact-container">
+		<div className="contact-container" style={onLeaveContact ? {animation: 'onUnmountEffect 0.5s'} : {}}>
 			<div className="contact-out" onClick={handleClickOut}></div>
 			<div className="contact box">
 				<h2>Me contacter</h2>
