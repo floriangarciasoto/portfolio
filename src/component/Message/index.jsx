@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import { usePortfolioContext } from "../../context/usePortfolioContext"
+import './index.css'
 
 const Message = () => {
-	const {message, setMessage} = usePortfolioContext();
+	const { message, setMessage } = usePortfolioContext();
 	const timeoutID = useRef(null);
 
 	useEffect(() => {
@@ -10,28 +11,28 @@ const Message = () => {
 		var messageNode = document.getElementById('message');
 		messageNode.style.animation = 'none';
 		messageNode.offsetHeight;
-		messageNode.style.animation = null; 
+		messageNode.style.animation = null;
 
 		// Reset message bar animation
 		var messageBarNode = document.getElementById('message-bar');
 		messageBarNode.style.animation = 'none';
 		messageBarNode.offsetHeight;
-		messageBarNode.style.animation = null; 
+		messageBarNode.style.animation = null;
 
 		clearTimeout(timeoutID.current);
 		timeoutID.current = setTimeout(() => {
 			setMessage('');
 		}, 5000);
-	},[message]);
+	}, [message]);
 
-    return (
-		<div className="message-dv">
-			<div id="message" className="message">
-			<div className="message-text">{message}</div>
-				<div id="message-bar" className="message-bar"></div>
+	return (
+		<div id="message-dv">
+			<div id="message">
+				<div id="message-text">{message}</div>
+				<div id="message-bar"></div>
 			</div>
 		</div>
-    )
+	)
 }
 
 export default Message

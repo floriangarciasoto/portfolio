@@ -1,0 +1,18 @@
+#footer {
+    margin-top: 5em;
+}
+
+#footer-top {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1));
+    height: 5em;
+}
+
+#footer-inner {
+    padding: 1em;
+    background-color: black;
+}
+
+#footer-inner p {
+    text-align: center;
+    margin: 1em;
+}

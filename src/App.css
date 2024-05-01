@@ -1,0 +1,176 @@
+:root {
+    color-scheme: dark;
+    --main-color: #177AE8;
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('/font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Dotnation';
+    src: url('/font/Dotnation.ttf');
+}
+
+@keyframes onMountEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes onUnmountEffect {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+html {
+    scroll-padding-top: 5em;
+}
+
+body {
+    font-family: 'Roboto Regular';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+section>h2 {
+    font-family: 'Dotnation';
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+button,
+.button-icon {
+    margin: 0.5em 0.25em;
+    padding: 0.5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1rem;
+}
+
+button:hover,
+.button-icon-hover {
+    color: var(--main-color);
+    background-color: white;
+}
+
+.button-icon {
+    padding-left: 2.25em;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9px);
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #888;
+}
+
+.element-hover {
+    position: relative;
+    display: block;
+}
+
+.element-hover> :last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.element-hover> :last-child:hover {
+    opacity: 1;
+}
+
+.info {
+    position: relative;
+    color: var(--main-color);
+    background-color: white;
+    padding: 0.75em;
+    text-align: center;
+    border-radius: 1em;
+    max-width: 22.5em;
+}
+
+.info img {
+    position: absolute;
+    right: calc(-2em / 3);
+    top: calc(-2em / 3);
+    background-color: white;
+    height: 2em;
+    padding: 0.35em;
+    border-radius: 1.75em;
+}
+
+.info a {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .info {
+        max-width: 35em;
+    }
+}
+
+
+@media (hover: hover) {
+
+    button,
+    .burger,
+    header nav ul>* {
+        transition-duration: 0.4s;
+    }
+
+    .element-hover> :last-child {
+        transition: opacity 0.4s ease-out;
+    }
+
+    .click-out {
+        cursor: pointer;
+    }
+}

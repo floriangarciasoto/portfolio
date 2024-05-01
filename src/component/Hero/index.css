@@ -1,0 +1,120 @@
+#hero {
+    height: 100vh;
+}
+
+#hero> :first-child {
+    flex-grow: 1;
+}
+
+#about {
+    padding: 1em;
+}
+
+#pp {
+    --pp-size: 8em;
+    width: var(--pp-size);
+    height: var(--pp-size);
+    border-radius: var(--pp-size);
+    margin: 1em;
+}
+
+#about-infos {
+    text-align: center;
+    padding: 0 1em;
+}
+
+#about-name {
+    font-weight: bold;
+}
+
+.first-letter {
+    text-decoration: underline var(--main-color);
+    text-underline-offset: 0.125em;
+}
+
+#about-subtitle {
+    font-size: 1.25rem;
+    margin: 0.25em 0 0.25em 0;
+}
+
+.about-hook {
+    margin: 1em 0;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.about-hook>div {
+    margin-bottom: 0.5em;
+}
+
+#about-cta {
+    margin: 0.5em 0 1em 0;
+}
+
+#about-cta button,
+#about-cta img {
+    margin: 0;
+}
+
+#about-cta-icons a {
+    height: 2.25em;
+}
+
+#about-cta-icons a img {
+    height: 100%;
+}
+
+#about-cta> :not(:first-child),
+#about-cta-icons> :not(:first-child) {
+    margin-left: 0.75em;
+}
+
+#hero-arrow {
+    height: 5em;
+    opacity: 0;
+}
+
+#hero-arrow.show {
+    opacity: 1;
+    animation: onMountEffect 2s;
+}
+
+#hero-arrow.show.leave {
+    opacity: 0;
+    animation: onUnmountEffect 0.5s;
+}
+
+@media (min-width: 768px) {
+    #about {
+        flex-direction: row !important;
+    }
+
+    #about h1,
+    #about h2 {
+        text-align: left;
+    }
+
+    #pp {
+        --pp-size: 12.5em;
+    }
+
+    #about-subtitle {
+        font-size: 1.5rem;
+    }
+
+    #about-infos {
+        text-align: left;
+    }
+
+    .about-hook {
+        max-width: 40em;
+    }
+
+    #about-cta {
+        justify-content: flex-start !important;
+    }
+
+    #about-cv-btn {
+        margin-left: 0;
+    }
+}

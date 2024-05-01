@@ -1,0 +1,151 @@
+@keyframes rotateLogo {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 359deg;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#header-wrapper {
+    position: relative;
+}
+
+#header-shadow {
+    position: absolute;
+    width: 100%;
+    height: 7em;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    transition-duration: 0.4s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#header-shadow.on {
+    opacity: 1;
+}
+
+#logo,
+#burger {
+    position: absolute;
+    margin: 1em;
+    z-index: 1;
+}
+
+#logo {
+    height: 4em;
+}
+
+#logo.rotate {
+    animation: rotateLogo 0.4s;
+}
+
+#burger {
+    height: 3em;
+    right: 0;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#burger:hover {
+    opacity: 1;
+}
+
+nav>ul>* {
+    margin: 0.25em 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+nav>ul>*:hover {
+    opacity: 1;
+}
+
+nav a {
+    display: block;
+}
+
+nav img {
+    height: 2.25em;
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00000077;
+        backdrop-filter: blur(9px);
+        animation: onMountEffect 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav:not(.show-nav) {
+        display: none;
+    }
+
+    nav.nav-leaving {
+        animation: onUnmountEffect 0.5s;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        font-size: 1.5rem;
+    }
+
+    nav ul>* {
+        height: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    #burger {
+        display: none;
+    }
+
+    nav {
+        position: absolute;
+        right: 0;
+        margin: 1em;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125rem;
+    }
+
+    nav>ul>* {
+        margin: 0 0.5em;
+    }
+
+    nav img {
+        height: 1.875em;
+    }
+}
+
+@media (hover: hover) {
+    #logo {
+        cursor: pointer;
+    }
+}

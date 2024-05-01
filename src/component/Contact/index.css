@@ -1,0 +1,119 @@
+#contact-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: onMountEffect 0.5s;
+}
+
+#contact-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00000088;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+}
+
+.contact-sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin-top: 0.5em;
+}
+
+.contact-sep> :first-child,
+.contact-sep> :last-child {
+    width: 50%;
+    height: 2px;
+    background-color: #bbb;
+    margin: 0.75em;
+}
+
+#contact h3 {
+    color: #bbb;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+#contact h4 {
+    font-size: 1rem;
+}
+
+.contact-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-icon-copy {
+    background: url('/icon/white/copy-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-copy-hover {
+    background: url('/icon/blue/copy-icon.svg');
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-call {
+    background: url('/icon/white/phone-call-icon.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-call-hover {
+    background: url('/icon/blue/phone-call-icon.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-calendar {
+    background: url('/icon/white/calendar-svgrepo-com.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-calendar-hover {
+    background: url('/icon/blue/calendar-svgrepo-com.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-mail {
+    background: url('/icon/white/mail.svg'), var(--main-color);
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}
+
+.button-icon-mail-hover {
+    background: url('/icon/blue/mail.svg'), white;
+    background-repeat: no-repeat;
+    background-position: 15% 50%;
+    background-size: 1.25em;
+}

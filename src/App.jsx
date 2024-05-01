@@ -1,32 +1,40 @@
 import BgVideo from './component/BgVideo'
-import Contact from './component/Contact'
 import Header from './component/Header'
 import Hero from './component/Hero'
-import Hobbies from './component/Hobbies'
-import Message from './component/Message'
 import Projects from './component/Projects'
-import Training from './component/Training'
+// import Training from './component/Training'
+// import Hobbies from './component/Hobbies'
+import Contact from './component/Contact'
+import Message from './component/Message'
+import Footer from './component/Footer'
 import { usePortfolioContext } from './context/usePortfolioContext'
+import { useEffect } from 'react'
+import { fetchData } from './utils'
 
 function App() {
-  const {showContact, message} = usePortfolioContext();
+	const { setState, showContact, message } = usePortfolioContext();
 
-  return (
-    <>
-      <BgVideo />
-      <Header />
-      <Hero />
-      <Projects />
-      <Training />
-      <Hobbies />
-      {
-        showContact && <Contact />
-      }
-      {
-        message !== '' && <Message />
-      }
-    </>
-  )
+	useEffect(() => {
+		fetchData(setState);
+	}, [])
+
+	return (
+		<>
+			<BgVideo />
+			<Header />
+			<Hero />
+			<Projects />
+			{/* <Training /> */}
+			{/* <Hobbies /> */}
+			{
+				showContact && <Contact />
+			}
+			{
+				message !== '' && <Message />
+			}
+			<Footer />
+		</>
+	)
 }
 
 export default App
