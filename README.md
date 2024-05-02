@@ -6,7 +6,7 @@ Ce projet est bien plus qu'une simple vitrine de mes réalisations ; il représe
 
 ## Objectif
 
-Mon objectif avec ce portfolio est de mettre en pratique les principes SOLID et d'autres bonnes pratiques de développement. Il me sert également de terrain d'entraînement pour perfectionner mes compétences et rendre mes autres projets présentables. Ce portfolio est également un exemple de mon engagement envers le Build in Public, avec des (publications régulières sur LinkedIn)[] pour partager mes progrès et mes apprentissages.
+Mon objectif avec ce portfolio est de mettre en pratique les principes SOLID et d'autres bonnes pratiques de développement. Il me sert également de terrain d'entraînement pour perfectionner mes compétences et rendre mes autres projets présentables. Ce portfolio est également un exemple de mon engagement envers le Build in Public, avec des (publications régulières sur LinkedIn)[https://www.linkedin.com/in/florian-garcia-soto/recent-activity/all/] pour partager mes progrès et mes apprentissages.
 
 ## État Actuel
 
