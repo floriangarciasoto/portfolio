@@ -1,8 +1,8 @@
 # Portfolio
 
-Voici le code source de mon portfolio.
+Celui-ci est bien plus qu'une simple vitrine de mes réalisations ; il représente un moyen de démontrer les compétences que j'acquiers tout au long de ma formation.
 
-Ce projet est bien plus qu'une simple vitrine de mes réalisations ; il représente un moyen de démontrer les compétences que j'acquiers tout au long de ma formation.
+https://github.com/floriangarciasoto/portfolio/assets/55450437/a059063d-3937-4640-89d5-ecf638d3b788
 
 ## Objectif
 
