@@ -22,7 +22,14 @@ const Project = ({ project }) => {
                     project.languages.map((language, index) => <img key={index} src={'icon/language/' + languagesIcons[language]} alt={language} title={language} />)
                 }
             </div>
-            {project.content}
+            <div className="project-brand d-flex justify-content-center">
+                {
+                    project.brand.search(/\.mp4$/) === -1
+                        ? <img src={project.brand} alt={project.title}/>
+                        : <video src={project.brand} autoPlay muted loop></video>
+                }
+            </div>
+            <p className="project-description">{project.description}</p>
             <div className="project-links">
                 {
                     project.links.demo !== undefined &&

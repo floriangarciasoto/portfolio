@@ -9,6 +9,15 @@
     margin: 0.25em;
 }
 
+.project-brand > * {
+    max-height: 50vh;
+}
+
+.project-description {
+    margin: 0.75em 0;
+    text-align: center;
+}
+
 .project-links {
     display: flex;
     justify-content: center;
