@@ -30,7 +30,7 @@ const Hero = () => {
 		<section id="hero" className="d-flex flex-column align-items-center justify-content-between">
 			<div className="d-flex flex-column align-items-center justify-content-center">
 				<div id="about" className="d-flex flex-column align-items-center justify-content-center">
-					<img id="pp" src="/img/blank-pp.webp" alt="Photo de profil" />
+					<img id="pp" src="/img/pp.webp" alt="Photo de profil" />
 					<div id="about-infos">
 						<h1 id="about-name"><span className="first-letter">F</span>lorian <span className="first-letter">G</span>arcia <span className="first-letter">S</span>oto</h1>
 						<h2 id="about-subtitle">{state.subtitle}</h2>
