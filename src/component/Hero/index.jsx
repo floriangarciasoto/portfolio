@@ -38,7 +38,8 @@ const Hero = () => {
 							state.about.map((paragraph, index) => <p key={index} className="about-hook">{paragraph}</p>)
 						}
 						<div id="about-cta" className="d-flex flex-wrap justify-content-center align-items-center">
-							<a href="/doc/cv.pdf" rel="noreferrer" target="_blank"><button id="about-cv-btn">Voir mon CV</button></a>
+							<a href="https://aventures.ddns.net/unlisted/deliver/doc/portfolio/cv.pdf" rel="noreferrer" target="_blank"><button id="about-cv-btn">Voir mon CV</button></a>
+							<a href="https://aventures.ddns.net/unlisted/deliver/doc/portfolio/lm.pdf" rel="noreferrer" target="_blank"><button id="about-lm-btn">Voir ma LM</button></a>
 							<button onClick={handleClickContact}>Me contacter</button>
 							<div id="about-cta-icons" className="d-flex">
 								<a className="element-hover" href="https://www.linkedin.com/in/florian-garcia-soto/" rel="noreferrer" target="_blank" title="Voir mon profil LinkedIn">

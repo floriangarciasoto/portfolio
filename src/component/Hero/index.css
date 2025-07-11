@@ -50,12 +50,12 @@
 }
 
 #about-cta {
-    margin: 0.5em 0 1em 0;
+    margin-bottom: 0.5em;
 }
 
 #about-cta button,
-#about-cta img {
-    margin: 0;
+#about-cta-icons {
+    margin: 0.35em 0;
 }
 
 #about-cta-icons a {

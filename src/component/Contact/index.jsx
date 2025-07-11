@@ -21,9 +21,9 @@ const Contact = () => {
 		window.open('tel:+33613322736');
 	}
 
-	const handleRendezVous = () => {
-		window.open('https://calendly.com/equipe-3wa/prise-de-contact-entreprise-eleve?utm_content=Florian%20Garcia&utm_campaign=rectInocEnkWgtXUU&utm_source=+33613322736', '_blank');
-	}
+	// const handleRendezVous = () => {
+	// 	window.open('https://calendly.com/equipe-3wa/prise-de-contact-entreprise-eleve?utm_content=Florian%20Garcia&utm_campaign=rectInocEnkWgtXUU&utm_source=+33613322736', '_blank');
+	// }
 
 	const handleMailCopy = () => {
 		copyToClipboard('floriangarciasoto@outlook.fr');
@@ -54,10 +54,12 @@ const Contact = () => {
 						<div className="button-icon button-icon-call">Appeler</div>
 						<div className="button-icon button-icon-call-hover button-icon-hover">Appeler</div>
 					</div>
+{/* 
 					<div className="element-hover" title="Prendre un rendez-vous téléphonique" onClick={handleRendezVous}>
 						<div className="button-icon button-icon-calendar">RDV</div>
 						<div className="button-icon button-icon-calendar-hover button-icon-hover">RDV</div>
 					</div>
+*/}
 				</div>
 				<div className="contact-sep">
 					<div></div>

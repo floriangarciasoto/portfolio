@@ -11,6 +11,9 @@ const initialState = {
     buildInPublicMessage: '',
     projects: [
 
+    ],
+    legal: [
+        
     ]
 }
 
